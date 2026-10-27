@@ -10,7 +10,8 @@ WORKDIR /app
 COPY requirements.txt ./requirements.txt
 RUN pip install --no-cache-dir -r requirements.txt
 COPY db.py main.py ./
-COPY static/ ./static/
+RUN mkdir -p /app/static
+COPY index.html app.js styles.css ./static/
 RUN mkdir -p /app/data
 
 EXPOSE 8000
