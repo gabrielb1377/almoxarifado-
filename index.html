@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="theme-color" content="#0c1424">
+  <title>Almoxarifado Central • Gestão de Materiais</title>
+  <link rel="stylesheet" href="/static/styles.css">
+</head>
+<body>
+  <section id="login-screen" class="login-shell">
+    <div class="login-card">
+      <div class="brand-icon large">▧</div>
+      <span class="eyebrow">GESTÃO DE MATERIAIS</span>
+      <h1>Almoxarifado<br><em>Central.</em></h1>
+      <p>Controle seus componentes, reservas e montagens em um só lugar.</p>
+      <form id="login-form">
+        <label>E-mail<input name="email" type="email" placeholder="seu@email.com" required autocomplete="username"></label>
+        <label>Senha<input name="password" type="password" required placeholder="Sua senha" autocomplete="current-password"></label>
+        <button type="submit" class="btn primary full">Entrar no sistema <span>→</span></button>
+      </form>
+      <small id="login-error"></small>
+      <div class="login-footer"><span class="pulse"></span> Acesso restrito a usuários autorizados</div>
+    </div>
+    <div class="login-visual"><div class="halo"></div><div class="screen-preview"><span>AC / STOCK INTELLIGENCE</span><b>Controle preciso.<br>Operação sem falhas.</b><p>Estoque • Montagens • Compras • Rastreabilidade</p></div></div>
+  </section>
+  <div id="app" hidden>
+    <aside class="sidebar" id="sidebar">
+      <div class="logo"><div class="brand-icon">▧</div><div><b>almox<span>.</span></b><small>CENTRAL</small></div></div>
+      <div class="workspace-label">WORKSPACE</div>
+      <nav id="navigation"></nav>
+      <div class="sidebar-bottom"><div class="shield">◈ <span>Sistema auditável<br><small>Acesso autenticado</small></span></div></div>
+    </aside>
+    <div class="main-shell">
+      <header class="topbar">
+        <div class="top-left"><button id="menu-toggle" aria-label="Abrir menu" class="menu-toggle">☰</button><div id="breadcrumb">Visão geral</div></div>
+        <div class="top-right"><span id="current-date"></span><div id="avatar">AC</div><div id="current-user"></div><button class="exit" id="logout" title="Sair">↪</button></div>
+      </header>
+      <main id="content"></main>
+      <footer class="app-footer">ALMOXARIFADO CENTRAL <span>•</span> Controle de componentes e materiais <span id="connection-state">● Banco conectado</span></footer>
+    </div>
+  </div>
+  <div id="modal-root"></div><div id="toast-root"></div>
+  <script src="/static/app.js" defer></script>
+</body>
+</html>
